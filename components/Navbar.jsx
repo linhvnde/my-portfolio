@@ -17,7 +17,7 @@ export default function Navbar() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{duration: 1.5}}
       ></motion.div>
-      <motion.nav className='nav-content flex fixed top-[5.15rem] left-1/2 h-12 -translate-x-1/2 py-2 md:top-[1.7rem] md:h-[initial] md:py-0'
+      <motion.nav className='nav-content flex fixed top-[5.15rem] left-1/2 h-12 -translate-x-1/2 py-2 md:top-[1.7rem] md:h-[initial] md:py-2'
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{duration: 1.5}}
