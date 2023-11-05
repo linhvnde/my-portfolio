@@ -1,15 +1,20 @@
+import About from '@/components/About';
 import Header from '@/components/Header';
+import Intro from '@/components/Intro';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="h-screen snap-y snap-mandatory overflow-scroll z-0">
       {/* Header */}
       <Header />
       <Navbar />
-      {/* Hero */}
+      {/* Intro */}
+      <Intro/>
 
+      {/* About */}
+      <About />
       {/* Experience */}
 
       {/* Skills */}
