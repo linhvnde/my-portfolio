@@ -23,7 +23,7 @@ export default function Intro() {
           duration: 4.5,
         }}
           className='flex justify-center items-center '>        
-          <div className='profile-image absolute mt-[82vh] overflow-hidden rounded-full border border-emerald-700 h-[20vmin] w-[20vmin]'>        
+          <div className='profile-image absolute mt-[82vh] overflow-hidden rounded-full h-[20vmin] w-[20vmin]'>        
             <Image  src="https://res.cloudinary.com/dkuwzoiqf/image/upload/t_Square Profile Picture/v1699225827/my-portfolio/IMG_4909-EDIT_cla1wa.jpg" alt="Linh profile picture" layout='fill' objectFit='cover' quality="100" priority={true} />
           </div>
         </motion.div>
