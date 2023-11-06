@@ -30,9 +30,10 @@ export default function Header() {
         transition={{
           duration: 1.5
         }}        
-        >
-        <SocialIcon className='cursor-pointer' network='email' fgColor='darkGreen' bgColor='transparent'/>
-        <p className='uppercase md:inline-flex text-sm text-green-800'>DROP AN EMAIL</p>
+      >
+        
+        <SocialIcon className='cursor-pointer' network='email' url="mailto:linh.nh.tyty@gmail.com" fgColor='darkGreen' bgColor='transparent'/>
+        <p className='uppercase md:inline-flex text-sm text-green-800'><a href="mailto:linh.nh.tyty@gmail.com"> DROP AN EMAIL</a></p>
       </motion.div>
     
       
