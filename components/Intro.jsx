@@ -36,11 +36,11 @@ export default function Intro() {
               duration: 5
             }}
             >
-            <h1 className='text-lg mt-[54vh]  text-green-900 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
+            <h1 className='text-lg mt-[54vh]  text-emerald-700 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
             Full Stack Developer 
             </h1>         
          
-            <p className="max-w-4xl mt-[5vh] px-4 text-base font-medium !leading-[2] sm:text-lg text-green-900 text-justify">              
+            <p className="max-w-4xl mt-[5vh] px-4 text-base font-medium !leading-[2] sm:text-lg text-emerald-700 text-justify">              
               <span className="font-bold">Linh is my name</span> - a <span className="italic">career changer</span> who pivoted to <span className="font-bold">Full Stack Development</span> from a decade as a <span className="italic">Business Strategist</span>. Specialize in the <span className="underline">MERN stack</span> and passionate about crafting <span className="font-bold">innovative software solutions</span> that are both user-intuitive and business-optimal.
             </p>
           
