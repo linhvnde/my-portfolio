@@ -3,13 +3,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import SectionHeading from './section-heading'
 
 export default function About() {
   return (
     <section id='about' className='snap-start sm:h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-      <h3 className='absolute top-[10rem] sm:top-[5rem] my-2 uppercase tracking-[20px] text-emerald-700 text-2xl text-center'>
+      <SectionHeading>
         About
-      </h3>
+      </SectionHeading>
 
       <motion.div
         initial={{
