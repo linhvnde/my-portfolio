@@ -5,6 +5,7 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 import { SocialIcon } from 'react-social-icons'
+import {HiDownload} from "react-icons/hi"
 
 
 
@@ -20,19 +21,19 @@ export default function Header() {
         }}
       >
         {/* social icons */}
-        <SocialIcon url="https://github.com/linhvnde" fgColor='darkGreen' bgColor='transparent'/>
-        <SocialIcon url="https://www.linkedin.com/in/linhnhvn-fullstackdev/" fgColor='darkGreen' bgColor='transparent'/>
+        <SocialIcon className=' focus:scale-110 hover:scale-110' url="https://github.com/linhvnde" fgColor='darkGreen' bgColor='transparent'/>
+        <SocialIcon className=' focus:scale-110 hover:scale-110' url="https://www.linkedin.com/in/linhnhvn-fullstackdev/" fgColor='darkGreen' bgColor='transparent'/>
       </motion.div>
       <motion.div
-        className='flex w-[10rem] flex-row mt-1.5 justify-evenly items-center cursor-pointer header-1'
+        className='flex w-[12rem] flex-row mt-1.5 justify-evenly items-center cursor-pointer header-1'
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{
           duration: 1.5
         }}        
       >
-        
-        <SocialIcon className='cursor-pointer' network='email' url="mailto:linh.nh.tyty@gmail.com" fgColor='darkGreen' bgColor='transparent'/>
+        <a href='/CV - Linh Nguyen Hoang l Full Stack Developer.pdf' download title='Download My CV' className=' focus:scale-110 hover:scale-110 text-green-800'><HiDownload/> </a>
+        <SocialIcon className='focus:scale-110 hover:scale-110 cursor-pointer' network='email' url="mailto:linh.nh.tyty@gmail.com" fgColor='darkGreen' bgColor='transparent'/>
         <p className='uppercase md:inline-flex text-sm text-green-800'><a href="mailto:linh.nh.tyty@gmail.com"> DROP AN EMAIL</a></p>
       </motion.div>
     
