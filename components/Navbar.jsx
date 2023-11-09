@@ -29,7 +29,7 @@ export default function Navbar() {
               
               return (
                 <li key={link.hash} className='h-3/4 flex items-center justify-center'>
-                  <Link href={link.hash} className='flex w-full items-center justify-center px-2 py-1 hover:text-orange-500 transition'>{link.name}</Link>
+                  <Link href={link.hash} className=' focus:scale-110 hover:scale-110 flex w-full items-center justify-center px-2 py-1 hover:text-orange-500 transition'>{link.name}</Link>
                 </li>
               )
             })
