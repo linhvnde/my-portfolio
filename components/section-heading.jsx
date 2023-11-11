@@ -1,9 +1,23 @@
+"use client"
+
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function SectionHeading({children}) {
   return (
-    <h2 className='absolute top-[10rem] sm:top-[5rem] my-2 uppercase tracking-[20px] text-emerald-700 text-2xl text-center'>
+    <motion.h2
+      className='absolute top-[10rem] sm:top-[5rem] my-2 uppercase tracking-[20px] text-emerald-700 text-2xl text-center'
+      initial={{
+        opacity:0
+      }}
+      whileInView={{
+        opacity:1
+      }}
+      transition={{
+        duration:1.5
+      }}
+    >
         {children}
-    </h2>
+    </motion.h2>
   )
 }
