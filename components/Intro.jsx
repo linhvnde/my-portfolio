@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Intro() {
   return (
-    <section id='intro' className=' snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden'>
+    <section id='home' className=' snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden'>
       <div className='relative'>        
         <BackgroundCircle />
         <motion.div
