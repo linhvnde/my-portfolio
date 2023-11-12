@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Intro() {
   return (
-    <section id='home' className=' snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden'>
+    <section id='home' className=' snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden pb-[5vh]'>
       <div className='relative'>        
         <BackgroundCircle />
         <motion.div
@@ -22,7 +22,7 @@ export default function Intro() {
         transition={{
           duration: 4.5,
         }}
-          className='flex justify-center items-center '>        
+          className='flex justify-center items-center  '>        
           <div className='profile-image absolute mt-[82vh] overflow-hidden rounded-full h-[20vmin] w-[20vmin]'>        
             <Image  src="https://res.cloudinary.com/dkuwzoiqf/image/upload/t_Square Profile Picture/v1699225827/my-portfolio/IMG_4909-EDIT_cla1wa.jpg" alt="Linh profile picture" layout='fill' objectFit='cover' quality="100" priority={true} />
           </div>
@@ -36,7 +36,7 @@ export default function Intro() {
               duration: 5
             }}
             >
-            <h1 className='text-lg mt-[54vh]  text-emerald-700 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
+            <h1 className='text-lg mt-[48vh]  text-emerald-700 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
             Full Stack Developer 
             </h1>         
          
