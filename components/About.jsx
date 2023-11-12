@@ -7,7 +7,7 @@ import SectionHeading from './section-heading'
 
 export default function About() {
   return (
-    <section id='about' className='snap-start sm:h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
+    <section id='about' className='pb-[5vh]  snap-start sm:h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>
       <SectionHeading>
         About
       </SectionHeading>
@@ -25,9 +25,9 @@ export default function About() {
           opacity:1,
         }}
         viewport={{ once: true }}
-        className='flex justify-center -mt-56'
+        className='flex justify-center'
       >        
-        <div className='about-image relative sm:mt-[27rem] mt-[28rem] md:mt-[12rem] h-56 w-56 sm:h-[40vh] sm:w-[40vw] md:h-[30vh] md:w-[30vw] rounded-lg overflow-hidden'>          
+        <div className='about-image relative md:-mt-[0.1rem] sm:mt-[15rem] mt-[8rem] h-56 w-56 sm:h-[40vh] sm:w-[40vw] md:h-[60vh] md:w-[30vw] rounded-lg overflow-hidden'>          
           <Image
             src="https://res.cloudinary.com/dkuwzoiqf/image/upload/v1699304237/my-portfolio/z4295401506805_9198ca46dcee5224ffc35eafe5eaca58_w9ww9a.jpg"
             alt="Picture about Linh" layout='fill' objectFit='cover' quality="100" priority={true} 
@@ -35,7 +35,7 @@ export default function About() {
         </div>
       </motion.div>
       <motion.div
-        className='about-text relative mt-[2vh] sm:mt-[3vh] md:mt-[40vh] text-sm sm:text-base sm:space-y-3 md:space-y-10 px-0 md:px-10 text-justify text-emerald-700  flex flex-col justify-center items-center'
+        className='about-text relative mt-[2vh] sm:mt-[3vh] md:mt-[1.8vh] text-sm sm:text-base space-y-3 sm:space-y-3 md:space-y-7 px-0 md:pl-5 text-justify text-emerald-700  flex flex-col justify-center items-center'
         initial={{
           x: -200,
           opacity: 0,
