@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className='sticky top-0 p-3 flex items-start justify-center md:justify-between max-w-7xl mx-auto xl:items-center
     z-[999]'>
-      <motion.div className='flex w-[10rem] flex-row mt-[0.75rem] justify-evenly items-center header-1'
+      <motion.div className='flex w-[10rem] flex-row justify-evenly items-center header-1'
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{
@@ -25,7 +25,7 @@ export default function Header() {
         <SocialIcon className=' focus:scale-110 hover:scale-110' url="https://www.linkedin.com/in/linhnhvn-fullstackdev/" fgColor='darkGreen' bgColor='transparent'/>
       </motion.div>
       <motion.div
-        className='flex w-[10rem] flex-row mt-[0.75rem] justify-evenly items-center cursor-pointer header-1'
+        className='flex w-[10rem] flex-row justify-evenly items-center cursor-pointer header-1'
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{
