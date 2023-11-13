@@ -11,14 +11,16 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav>
+      <div className='bg-white bg-opacity-70  h-[3.5rem] md:h-0 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-65'>
+
       <motion.div
-        className="z-[999] nav-bg fixed top-[5rem] left-1/2  h-[4.5rem] w-full border border-white border-opacity-40 bg-white bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] md:top-6 sm:h-[3.25rem] md:w-[34rem] sm:w-[85%] rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-65
+        className="z-[999] nav-bg fixed top-[3.75rem] left-1/2  h-[4rem] w-full border border-green  border-opacity-5 bg-white bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] md:top-[0.75rem] sm:h-[3.25rem] md:w-[34rem] sm:w-[85%] rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-65
         "
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{duration: 1.5}}
       ></motion.div>
-      <motion.nav className='z-[999] nav-content flex fixed top-[5.15rem] left-1/2 h-12 -translate-x-1/2 py-2 md:top-[1.7rem] md:h-[initial] md:py-2'
+      <motion.nav className='z-[999] nav-content flex fixed top-[3.85rem] left-1/2 h-12 -translate-x-1/2 py-2 md:top-[0.95rem] md:h-[initial] md:py-2'
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{duration: 1.5}}
@@ -36,6 +38,7 @@ export default function Navbar() {
           }
         </ul>
       </motion.nav>
+      </div>
     </nav>
   )
 }

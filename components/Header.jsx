@@ -11,7 +11,7 @@ import {HiDownload} from "react-icons/hi"
 
 export default function Header() {
   return (
-    <header className='sticky top-0 p-3 flex items-start justify-center md:justify-between max-w-7xl mx-auto xl:items-center
+    <header className=' bg-white bg-opacity-70 backdrop-blur-[0.5rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-65 sticky top-0 p-3 flex items-start justify-center md:justify-between max-w-7xl mx-auto xl:items-center
     z-[999]'>
       <motion.div className='flex w-[10rem] flex-row justify-evenly items-center header-1'
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
