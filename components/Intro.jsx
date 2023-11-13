@@ -36,7 +36,7 @@ export default function Intro() {
               duration: 5
             }}
             >
-            <h1 className='text-lg mt-[48vh]  text-emerald-700 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
+            <h1 className='text-lg mt-[52vh]  text-emerald-700 sm:text-xl uppercase font-semibold tracking-[10px] sm:tracking-[15px]' >
             Full Stack Developer 
             </h1>         
          
