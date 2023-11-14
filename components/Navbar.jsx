@@ -25,7 +25,7 @@ export default function Navbar() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
         transition={{duration: 1.5}}
       >
-        <ul className='flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-green-900 sm:w-[initial] sm:flex-nowrap sm:gap-5'>
+        <ul className='flex w-[90vw] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-green-900 sm:w-[initial] sm:flex-nowrap sm:gap-5'>
           {
             links.map(link => {
               
