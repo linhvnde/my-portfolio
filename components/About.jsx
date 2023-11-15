@@ -7,7 +7,7 @@ import SectionHeading from './section-heading'
 
 export default function About() {
   return (
-    <section id='about' className='border border-blue-600 pb-[5vh] scroll-mt-16   snap-start sm:h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>
+    <section id='about' className='border border-blue-600 pb-[5vh] scroll-mt-16   snap-start sm:h-screen flex flex-col relative text-center md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>
       <SectionHeading>
         About
       </SectionHeading>
