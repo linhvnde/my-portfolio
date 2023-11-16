@@ -10,7 +10,7 @@ import { projectsData } from '@/lib/data'
 
 export default function Projects() {
   return (
-    <section id='projects' className='border border-blue-600 snap-start h-screen relative flex flex-col justify-evenly items-center  scroll-mt-16  mx-0 sm:mx-auto w-full sm:max-w-full px-0 sm:px-10'>
+    <section id='projects' className='snap-start h-screen relative flex flex-col justify-evenly items-center  scroll-mt-16  mx-0 sm:mx-auto w-full sm:max-w-full px-0 sm:px-10'>
       <SectionHeading>
         Projects
       </SectionHeading>

@@ -7,7 +7,7 @@ import React from 'react'
 
 export default function ProjectCard(props) {
   return (
-    <article className='project-card snap-center overflow-hidden relative top-[10vh] p-2  border border-red-500 flex-shrink-0 w-[90vw] pt-1 flex flex-col justify-evenly items-center  sm:w-[80vw] sm:h-[65vh] rounded-lg sm:border-emerald-500/5 sm:bg-emerald-50/80 shadow-2xl'>      
+    <article className='project-card snap-center overflow-hidden relative top-[10vh] sm:top-[2vh] p-2  flex-shrink-0 w-[90vw] pt-1 flex flex-col justify-evenly items-center  sm:w-[80vw] sm:h-[60vh] rounded-lg sm:border-emerald-500/5 sm:bg-emerald-50/80 shadow-lg hover:shadow-2xl hover:bg-emerald-100 hover:scale-95 transition-all duration-300'>      
     <motion.h3
         initial={{
           x: -200,
@@ -41,7 +41,7 @@ export default function ProjectCard(props) {
           
         }}
         viewport={{ once: true }}
-        className='sm:absolute sm:top-[2.8rem] sm:-right-[11rem] md:-right-[14rem] sm:mb-3 sm:px-0 md:px-10 border border-purple-500 project-image relative w-[90vw] h-[30.3vh] sm:h-[34vh] sm:w-[80vw] md:h-[40vh] rounded-lg overflow-hidden sm:shadow-2xl'
+        className='sm:absolute sm:top-[2.8rem] sm:-right-[11rem] md:-right-[14rem] sm:mb-3 sm:px-0 md:px-10  project-image relative w-[90vw] h-[30.3vh] sm:h-[34vh] sm:w-[80vw] md:h-[40vh] rounded-lg overflow-hidden '
       >
         <Image
             src={props.imageUrl}
