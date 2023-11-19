@@ -17,7 +17,6 @@ export default function Intro() {
         animate={{
           scale: [0.5,0.8,1,1.2,1],
           opacity: 1,
-          // borderRadius: ["20%", "20%", "50%", "80%", "20%"],
         }}
         transition={{
           duration: 4.5,
