@@ -1,14 +1,20 @@
 "use client";
 
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { links } from '../lib/data';
-
+import React, { useState } from 'react'
 import Link from 'next/link';
+
+import { motion } from 'framer-motion'
+import clsx from 'clsx';
+
+import { links } from '../lib/data';
+import { useActiveSectionContext } from '@/context/active-section-context';
+
 
 
 export default function Navbar() {
+  const {activeSection, setActiveSection} = useActiveSectionContext()
+
   return (
     <nav>
       <div className='bg-white bg-opacity-70  h-[3.5rem] md:h-0 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-65'>
@@ -31,7 +37,24 @@ export default function Navbar() {
               
               return (
                 <li key={link.hash} className='h-3/4 flex items-center justify-center'>
-                  <Link href={link.hash} className=' focus:scale-110 hover:scale-110 flex w-full items-center justify-center px-2 py-1 hover:text-orange-500 transition'>{link.name}</Link>
+                  <Link
+                    href={link.hash}
+                    className={clsx('focus:scale-110 hover:scale-110 flex w-full items-center justify-center px-2 py-1 hover:text-yellow-400 transition', { "text-yellow-400": activeSection === link.name })}
+                    onClick={() => { setActiveSection(link.name); console.log(link.name)}}
+                  >
+                    {link.name}
+                    {activeSection === link.name && activeSection !== "" && (
+                      <motion.span
+                        className="bg-yellow-50 rounded-full absolute inset-0 -z-10"
+                        layoutId='activeSection'
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      ></motion.span>
+                    )}
+                  </Link>
                 </li>
               )
             })
