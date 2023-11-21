@@ -2,15 +2,29 @@
 
 import { motion } from 'framer-motion'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import ProjectCard from './ProjectCard'
 import { projectsData } from '@/lib/data'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
 
 export default function Projects() {
+  const { ref, inView } = useInView({
+    threshold: 0.50,
+  })
+  const { setActiveSection } = useActiveSectionContext()
+  
+  useEffect(() => {    
+    if (inView) {
+      console.log("Projects inView---",inView)
+      setActiveSection("Projects")
+    }    
+  }, [inView, setActiveSection])
+  
   return (
-    <section id='projects' className='snap-start h-screen relative flex flex-col justify-evenly items-center  scroll-mt-16  mx-0 sm:mx-auto w-full sm:max-w-full px-0 sm:px-10'>
+    <section id='projects' ref={ref} className='snap-start h-screen relative flex flex-col justify-evenly items-center  scroll-mt-16  mx-0 sm:mx-auto w-full sm:max-w-full px-0 sm:px-10'>
       <SectionHeading>
         Projects
       </SectionHeading>

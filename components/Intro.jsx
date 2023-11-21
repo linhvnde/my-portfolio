@@ -1,12 +1,26 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import BackgroundCircle from './BackgroundCircle'
 import Image from 'next/image'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.50,
+  })
+  const { setActiveSection } = useActiveSectionContext()
+  
+  useEffect(() => {    
+    if (inView) {
+      console.log("Home inView---",inView)
+      setActiveSection("Home")
+    }    
+  }, [inView, setActiveSection])
+  
   return (
-    <section id='home' className='  scroll-pt-14 snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden pb-[5vh]'>
+    <section id='home' ref={ref} className='  scroll-pt-14 snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden pb-[5vh]'>
       <div className='relative'>        
         <BackgroundCircle />
         <motion.div

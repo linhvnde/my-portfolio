@@ -1,13 +1,27 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import SectionHeading from './section-heading'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
 export default function About() {
+  const { ref, inView } = useInView({
+    threshold: 0.50,
+  })
+  const { setActiveSection } = useActiveSectionContext()
+  
+  useEffect(() => {    
+    if (inView) {
+      console.log("About inView---",inView)
+      setActiveSection("About")
+    }    
+  },[inView, setActiveSection])
+
   return (
-    <section id='about' className=' pb-[5vh] scroll-mt-16   snap-start sm:h-screen flex flex-col relative text-center md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>
+    <section id='about' ref={ref} className=' pb-[5vh] scroll-mt-16   snap-start sm:h-screen flex flex-col relative text-center md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>
       <SectionHeading>
         About
       </SectionHeading>
