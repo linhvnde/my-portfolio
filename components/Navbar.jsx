@@ -13,7 +13,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 
 export default function Navbar() {
-  const {activeSection, setActiveSection} = useActiveSectionContext()
+  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext()
 
   return (
     <nav>
@@ -40,7 +40,11 @@ export default function Navbar() {
                   <Link
                     href={link.hash}
                     className={clsx('focus:scale-110 hover:scale-110 flex w-full items-center justify-center px-2 py-1 hover:text-yellow-400 transition', { "text-yellow-400": activeSection === link.name })}
-                    onClick={() => { setActiveSection(link.name); console.log(link.name)}}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now())
+                      console.log(link.name)
+                    }}
                   >
                     {link.name}
                     {activeSection === link.name && activeSection !== "" && (

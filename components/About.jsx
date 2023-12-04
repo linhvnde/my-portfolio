@@ -11,14 +11,14 @@ export default function About() {
   const { ref, inView } = useInView({
     threshold: 0.50,
   })
-  const { setActiveSection } = useActiveSectionContext()
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext()
   
   useEffect(() => {    
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       console.log("About inView---",inView)
       setActiveSection("About")
     }    
-  },[inView, setActiveSection])
+  },[inView, setActiveSection, timeOfLastClick])
 
   return (
     <section id='about' ref={ref} className=' pb-[5vh] scroll-mt-16   snap-start sm:h-screen flex flex-col relative text-center md:flex-row max-w-7xl px-4 justify-evenly mx-auto items-center'>

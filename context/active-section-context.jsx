@@ -5,10 +5,17 @@ import React, { useState, createContext, useContext } from 'react'
 export const ActiveSectionContext = createContext(null)
 
 export default function ActiveSectionContextProvider({children}) {
-    const [activeSection, setActiveSection] = useState("")
+  const [activeSection, setActiveSection] = useState("")
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0)
 
   return (
-    <ActiveSectionContext.Provider value={{activeSection,setActiveSection}}>
+    <ActiveSectionContext.Provider
+      value={{
+        activeSection,
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick,
+      }}>
       {children}
     </ActiveSectionContext.Provider>
   )
