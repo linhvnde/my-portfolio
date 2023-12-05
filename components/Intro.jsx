@@ -10,15 +10,15 @@ export default function Intro() {
   const { ref, inView } = useInView({
     threshold: 0.50,
   })
-  const { setActiveSection } = useActiveSectionContext()
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext()
   
   useEffect(() => {    
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       console.log("Home inView---",inView)
       setActiveSection("Home")
     }    
-  }, [inView, setActiveSection])
-  
+  },[inView, setActiveSection, timeOfLastClick])
+
   return (
     <section id='home' ref={ref} className='  scroll-pt-14 snap-start h-screen flex flex-col items-center justify-start text-center overflow-hidden pb-[5vh]'>
       <div className='relative'>        
